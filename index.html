@@ -1,25 +1,39 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Favorite Artist</title>
-    <script type="module" crossorigin src="/Favorite-Artist/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/Favorite-Artist/assets/index-DL--xjcy.css">
-  </head>
-  <body>
-     <load src="./partials/header.html">
-    
-      <main>
-      <!-- Loads the specified .html file -->  
-       <load src="./partials/hero.html">
-       <load src="./partials/artists.html">
-       <load src="./partials/about-artists.html">
-       <load src="./partials/feedback.html">
-      </main>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Favorite Artist</title>
+  <script type="module" crossorigin src="/Favorite-Artist/index.js"></script>
+  <link rel="stylesheet" crossorigin href="/Favorite-Artist/assets/index-C3XN5iJh.css">
+</head>
+
+<body>
+  <load src="./partials/header.html">
+
+    <main>
+      <!-- Loads the specified .html file -->
+      <load src="./partials/hero.html">
+        <section class="artists">
+    <h2 class="artists__title">Artists</h2>
+    <h3 class="artists__subtitle">Explore Your New Favorite Artists</h3>
+    <ul class="artists__list">
+    </ul>
+    <button class="artists__button is-hidden" type="button">
+        Load More
+        <svg class="artists__button-icon" width="24" height="24" aria-hidden="true">
+            <use href="./images/sprite.svg#icon-arrow-down"></use>
+        </svg> </button>
+</section>
+        <load src="./partials/about-artists.html">
+          <load src="./partials/feedback.html">
+
+    </main>
 
     <footer class="footer"></footer>
 
 
-  </body>
+</body>
+
 </html>
