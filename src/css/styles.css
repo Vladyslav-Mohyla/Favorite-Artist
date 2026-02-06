@@ -8,3 +8,88 @@
 @import url('./reset.css');
 
 /* Sections style */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.backdrop.active {
+  display: flex;
+}
+
+.modal {
+  width: 344px;
+  padding: 16px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #0b0b0b, #1a1a1a);
+  color: #fff;
+  position: relative;
+}
+
+.modal-title {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  width: 100%;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 8px;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+.stars {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.stars span {
+  font-size: 20px;
+  cursor: pointer;
+  color: #444;
+}
+
+.stars span.active {
+  color: #fff;
+}
+
+.submit-btn {
+  display: block;
+  margin: 0 auto;
+  background: #7b61ff;
+  border: none;
+  border-radius: 12px;
+  padding: 6px 16px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 12px;
+  text-align: center;
+}

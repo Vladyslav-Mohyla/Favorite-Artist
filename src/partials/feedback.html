@@ -1,1 +1,30 @@
-<section class="feedback"></section>
+<section class="feedback">
+  <button class="feedback-btn" id="openFeedback">Leave feedback</button>
+</section>
+
+<div class="backdrop" id="feedbackBackdrop">
+  <div class="modal">
+    <button class="close-btn" id="closeFeedback">✕</button>
+
+    <h2 class="modal-title">Submit feedback</h2>
+
+    <form id="feedbackForm">
+      <input type="text" name="name" placeholder="Name" />
+      <input type="email" name="email" placeholder="Email" />
+
+      <textarea name="message" placeholder="Type your message..."></textarea>
+
+      <div class="stars" data-rating="0">
+        <span data-value="1">★</span>
+        <span data-value="2">★</span>
+        <span data-value="3">★</span>
+        <span data-value="4">★</span>
+        <span data-value="5">★</span>
+      </div>
+
+      <p class="error"></p>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</div>
