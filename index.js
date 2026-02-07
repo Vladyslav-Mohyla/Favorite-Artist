@@ -11,7 +11,7 @@ import{i as l}from"./assets/vendor-I1I71QQ2.js";(function(){const r=document.cre
           <p class="artist__card--info">${a}</p>
           <button class="artist__card--btn" type="button" data-id="${r}">
             Learn More 
-            <svg width="24" height="24"><use href="../icon/symbol-defs.svg#icon-play3"></use></svg>
+            <svg width="24" height="24"><use href="icon/symbol-defs.svg#icon-play3"></use></svg>
           </button>
         </div>
       </li>`}).join("")}function h(s,r){if(!s)return;const i=g(r);s.insertAdjacentHTML("beforeend",i)}function p(){return{listElement:document.querySelector(".artists__list"),loadMoreBtn:document.querySelector(".artists__button"),loader:document.querySelector(".loader-backdrop")}}function y(){const{listElement:s,loadMoreBtn:r,loader:i}=p();let n=1;async function e(){i&&i.classList.remove("is-hidden"),r&&r.classList.add("is-hidden");try{const t=await m(n),o=Array.isArray(t)?t:t.results||t.artists||[],a=t.totalPages||0;if(o.length===0){l.info({message:"No artists found."});return}h(s,o);const c=o.length===d&&(a===0||n<a);if(r&&r.classList.toggle("is-hidden",!c),n>1&&s&&s.firstElementChild){const{height:u}=s.firstElementChild.getBoundingClientRect();window.scrollBy({top:u*2,behavior:"smooth"})}}catch(t){console.error("Помилка рендеру:",t),l.error({title:"Error",message:t.message})}finally{i&&i.classList.add("is-hidden")}}r&&r.addEventListener("click",()=>{n+=1,e()}),e()}document.addEventListener("DOMContentLoaded",()=>{y()});
