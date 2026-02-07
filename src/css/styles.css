@@ -8,6 +8,7 @@
 @import url('./reset.css');
 
 /* Sections style */
+
 .backdrop {
   position: fixed;
   inset: 0;
@@ -23,7 +24,7 @@
 }
 
 .modal {
-  width: 344px;
+  width: 280px;
   padding: 16px;
   border-radius: 16px;
   background: linear-gradient(180deg, #0b0b0b, #1a1a1a);
@@ -33,13 +34,14 @@
 
 .modal-title {
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  font-size: 16px;
 }
 
 .close-btn {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 6px;
+  right: 6px;
   background: transparent;
   color: #fff;
   border: none;
@@ -54,17 +56,18 @@ textarea {
   border-radius: 8px;
   padding: 8px;
   color: #fff;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+  font-size: 14px;
 }
 
 textarea {
   resize: none;
-  height: 80px;
+  height: 64px;
 }
 
 .stars {
   text-align: center;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .stars span {
@@ -82,9 +85,10 @@ textarea {
   margin: 0 auto;
   background: #7b61ff;
   border: none;
-  border-radius: 12px;
-  padding: 6px 16px;
+  border-radius: 16px;
+  padding: 8px 20px;
   color: #fff;
+  font-size: 14px;
   cursor: pointer;
 }
 
@@ -92,4 +96,52 @@ textarea {
   color: #ff6b6b;
   font-size: 12px;
   text-align: center;
+}
+
+/* loader */
+.loader {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #333;
+  border-top-color: #7b61ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 12px auto;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media (min-width: 768px) {
+  .modal {
+    width: 344px;
+  }
+
+  .modal-title {
+    font-size: 18px;
+  }
+
+  input,
+  textarea {
+    font-size: 15px;
+  }
+
+  .stars span {
+    font-size: 22px;
+  }
+}
+
+
+@media (min-width: 1440px) {
+  .modal {
+    width: 344px;
+  }
 }

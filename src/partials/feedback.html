@@ -1,20 +1,39 @@
 <section class="feedback">
-  <button class="feedback-btn" id="openFeedback">Leave feedback</button>
+  <button class="feedback-btn js-open-feedback">Leave feedback</button>
 </section>
 
-<div class="backdrop" id="feedbackBackdrop">
-  <div class="modal">
-    <button class="close-btn" id="closeFeedback">✕</button>
+<div class="backdrop js-feedback-backdrop" aria-hidden="true">
+  <div
+    class="modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+  >
+    <button
+      class="close-btn js-close-feedback"
+      aria-label="Close feedback modal"
+    >
+      ✕
+    </button>
 
-    <h2 class="modal-title">Submit feedback</h2>
+    <h2 id="modalTitle" class="modal-title">Submit feedback</h2>
 
-    <form id="feedbackForm">
-      <input type="text" name="name" placeholder="Name" />
-      <input type="email" name="email" placeholder="Email" />
+    <form class="js-feedback-form">
+      <label>
+        Name
+        <input type="text" name="name" placeholder="Your Name" required />
+      </label>
 
-      <textarea name="message" placeholder="Type your message..."></textarea>
+      <label>
+        Message
+        <textarea
+          name="message"
+          placeholder="Type your message..."
+          required
+        ></textarea>
+      </label>
 
-      <div class="stars" data-rating="0">
+      <div class="stars js-rating">
         <span data-value="1">★</span>
         <span data-value="2">★</span>
         <span data-value="3">★</span>
@@ -22,7 +41,9 @@
         <span data-value="5">★</span>
       </div>
 
-      <p class="error"></p>
+      <div class="loader hidden js-feedback-loader"></div>
+
+      <p class="error js-feedback-error"></p>
 
       <button type="submit" class="submit-btn">Submit</button>
     </form>
