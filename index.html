@@ -14,7 +14,7 @@
     <script type="module" crossorigin src="/Favorite-Artist/index.js"></script>
     <link rel="modulepreload" crossorigin href="/Favorite-Artist/assets/vendor-DVYrn7a6.js">
     <link rel="stylesheet" crossorigin href="/Favorite-Artist/assets/vendor-D_nxXpU-.css">
-    <link rel="stylesheet" crossorigin href="/Favorite-Artist/assets/index-BAMQ9YOF.css">
+    <link rel="stylesheet" crossorigin href="/Favorite-Artist/assets/index-eONW_TtZ.css">
   </head>
   <body>
     <header class="header">
@@ -140,7 +140,57 @@
   </div>
 </section>
 
-      <section class="feedback"></section>
+      
+      <section class="feedback">
+  <button class="feedback-btn js-open-feedback">Leave feedback</button>
+</section>
+
+<div class="backdrop js-feedback-backdrop" aria-hidden="true">
+  <div
+    class="modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+  >
+    <button
+      class="close-btn js-close-feedback"
+      aria-label="Close feedback modal"
+    >
+      ✕
+    </button>
+
+    <h2 id="modalTitle" class="modal-title">Submit feedback</h2>
+
+    <form class="js-feedback-form">
+      <label class="form-field">
+        <span>Name</span>
+        <input type="text" name="name" placeholder="Your name" />
+      </label>
+
+      <label class="form-field">
+        <span>Message</span>
+        <textarea
+          name="message"
+          placeholder="Type your message..."
+        ></textarea>
+      </label>
+
+      <div class="stars js-rating" aria-label="Rating">
+        <span data-value="1">★</span>
+        <span data-value="2">★</span>
+        <span data-value="3">★</span>
+        <span data-value="4">★</span>
+        <span data-value="5">★</span>
+      </div>
+
+      <div class="loader hidden js-feedback-loader"></div>
+
+      <p class="error js-feedback-error"></p>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</div>
 
     </main>
 
@@ -195,6 +245,7 @@
     </div>
   </div>
 </footer>
+
 
 
   </body>
