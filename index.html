@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <script type="module" crossorigin src="/Favorite-Artist/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/Favorite-Artist/assets/index-CQuHQiT0.css">
+    <link rel="stylesheet" crossorigin href="/Favorite-Artist/assets/index-Dw8AmR7M.css">
   </head>
   <body>
     <header class="header">
@@ -47,7 +47,40 @@
 
     <main>
       <!-- Loads the specified .html file -->
-      <section class="hero"></section>
+      <section class="hero" id="hero">
+   <div class="container">
+    <div class="hero-text">
+      <h1 class="herotext"> Discover Your Next Favorite Artist Today</h1>
+      <p>Dive into a world of music discoveries with ArtistsHub – your personal guide to the boundless universe of sound. Explore, filter, and learn about your favorite artists all in one place.</p>
+      <button type ="button" class="hero-btn" id="hero-scroll-btn">Explore Artists
+          <svg class="hero-btn-icon" width="24" height="24">
+          <use href="/Favorite-Artist/assets/hero-CULvg4Nx.svg#icon-icon"></use>
+        </svg>
+
+      </button>
+    </div>
+  <div class="heropaint">
+      <picture>
+
+  <source 
+    media="(min-width: 1158px)" 
+    srcset="../img/hero/hero-desktop.webp 1x, ../img/hero/hero-desktop@2x.webp 2x">
+
+  <source 
+    media="(min-width: 768px)" 
+    srcset="../img/hero/hero-tablet.webp 1x, ../img/hero/hero-tablet@2x.webp 2x">
+
+  <img 
+    src="../img/hero/hero-mobile.webp" 
+    srcset="../img/hero/hero-mobile@2x.webp 2x"
+    alt="art" 
+    width="704"
+    class="hero-img">
+</picture>
+
+  </div>
+    </div>
+</section>
 
       <section class="artists" id="artists">
     <h2 class="artists__title">Artists</h2>
